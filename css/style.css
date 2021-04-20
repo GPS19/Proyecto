@@ -74,14 +74,17 @@ body{
 .heading-primary{
     text-transform: uppercase;
     backface-visibility: hidden; 
-    text-shadow: .1rem .5rem .5rem rgba(black, 0.2);
+   
 }
+
 
 .heading-primary--main, 
 .heading-primary--sub{
     display: block; 
     font-size: 10rem; 
     animation: moveInBottom 2s ease-out; 
+    text-shadow: .4rem .4rem .4rem black;
+    animation: glow 3s ease-in-out infinite alternate;
 }
 
 
@@ -182,5 +185,15 @@ body{
         opacity: 1;
         transform: translate(0); 
     }
+}
+
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px #72DC4D, 0 0 40px #72DC4D, 0 0 50px #0f9b0f, 0 0 60px #0f9b0f, 0 0 70px #2C7744;
+    }
+    100% {
+      text-shadow: 0 0 20px black, 0 0 30px #52c234, 0 0 40px #52c234, 0 0 50px #52c234, 0 0 60px #52c234, 0 0 70px #52c234, 0 0 80px #52c234;
+    }
+
 }
 
