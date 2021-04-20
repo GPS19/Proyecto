@@ -6,17 +6,28 @@ font-family: 'Press Start 2P', cursive;
 
 /* /////////////////// GENERAL */
 
-*{
+*, 
+*::after, 
+*::before{
     margin: 0; 
     padding: 0; 
-    box-sizing: border-box; 
+    box-sizing: inherit; 
 }
 
+
+html{
+    font-size: 62.5%;
+}
+
+
 body{
+    box-sizing: border-box;
     font-family: "Chathura", sans-serif;
     font-weight: 400;
-    font-size: 16px; 
     line-height: 1.7;
+    color: #72DC4D; 
+    background-color: black; 
+    padding: 3rem; 
 }
 
 
@@ -41,9 +52,54 @@ body{
 
 /* /////////////////// HEADER */
 
-#header{
+.header{
     grid-area: header;
-    height: 70vh; 
+    height: 100vh; 
+    font-family: 'Press Start 2P', cursive;
+    color:  #72DC4D; 
+    position: relative; 
+    background-size: cover;
+    background-position: top;
+
+}
+
+.header__text-box{
+    position: absolute; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center; 
+}
+
+.heading-primary{
+    text-transform: uppercase;
+    backface-visibility: hidden; 
+    text-shadow: .1rem .5rem .5rem rgba(black, 0.2);
+}
+
+.heading-primary--main, 
+.heading-primary--sub{
+    display: block; 
+    font-size: 10rem; 
+    animation: moveInBottom 2s ease-out; 
+}
+
+
+.bg-video{
+    position: absolute;
+    top: 0; 
+    left: 0;  
+    height: 100%;
+    width: 100%;
+    z-index: -1; 
+    opacity: .9;
+    overflow: hidden;
+}
+
+.bg_video__content{
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover;
 }
 
 
@@ -76,5 +132,55 @@ body{
 
 #visualización-datos{
     grid-area: vd; 
+}
+
+
+
+/* /////////////////// ANIMACIONES */
+
+@keyframes moveInLeft {
+    0%{ /* Before starting the animation - The beginnig */
+        opacity: 0; 
+        transform: translateX(-10rem);
+    }
+
+    80%{ /* Anything in between */
+        transform: translateX(1rem); 
+    }
+
+    100%{ /* After the animation - The end */
+        opacity: 1;
+        transform: translate(0); 
+    }
+}
+
+
+@keyframes moveInRight {
+    0%{ /* Before starting the animation - The beginnig */
+        opacity: 0; 
+        transform: translateX(10rem);
+    }
+
+    80%{ /* Anything in between */
+        transform: translateX(-1rem); 
+    }
+
+    100%{ /* After the animation - The end */
+        opacity: 1;
+        transform: translate(0); 
+    }
+}
+
+
+@keyframes moveInBottom {
+    0%{ /* Before starting the animation - The beginnig */
+        opacity: 0; 
+        transform: translateY(3rem);
+    }
+
+    100%{ /* After the animation - The end */
+        opacity: 1;
+        transform: translate(0); 
+    }
 }
 
