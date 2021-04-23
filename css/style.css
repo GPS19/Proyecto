@@ -27,7 +27,8 @@ body{
     line-height: 1.7;
     color: #72DC4D; 
     background-color: black; 
-    padding: 3rem; 
+    padding-left: 3rem; 
+    padding-right: 3rem;
 }
 
 
@@ -37,15 +38,14 @@ body{
 
 #layout{
     display: grid;
-    padding: 1em; 
-    column-gap: 0.5em; 
-    row-gap: 0.2em; 
+    padding: 1rem; 
+    row-gap: 0.2rem; 
     
     grid-template-areas:
-    "header header header"
-    "ITC STEAM CJ"
-    "vj vj vj"
-    "vd vd vd"
+    "header"
+    "Información"
+    "Videojuego"
+    "Gráficas"
 
 }
 
@@ -54,12 +54,14 @@ body{
 
 .header{
     grid-area: header;
-    height: 100vh; 
+    height: 75vh; 
     font-family: 'Press Start 2P', cursive;
     color:  #72DC4D; 
     position: relative; 
     background-size: cover;
     background-position: top;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #72DC4D;
 
 }
 
@@ -74,6 +76,7 @@ body{
 .heading-primary{
     text-transform: uppercase;
     backface-visibility: hidden; 
+    animation: moveInBottom 2s ease-out; 
    
 }
 
@@ -81,8 +84,7 @@ body{
 .heading-primary--main, 
 .heading-primary--sub{
     display: block; 
-    font-size: 10rem; 
-    animation: moveInBottom 2s ease-out; 
+    font-size: 8rem; 
     text-shadow: .4rem .4rem .4rem black;
     animation: glow 3s ease-in-out infinite alternate;
 }
@@ -105,6 +107,63 @@ body{
     object-fit: cover;
 }
 
+/* /////////////////// INFORMACIÓN */
+
+#Información{
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+    padding: 1rem; 
+    column-gap: 4rem;
+    grid-template-areas: 
+    "ITC STEAM CJ"; 
+
+    border-bottom: 1px solid #72DC4D;
+
+}
+
+
+/* /////////////////// CAJAS DE INFORMACIÓN */
+
+.Info-caja{
+    background-color: rgba(177, 177, 177, .3);
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0rem 0.5rem 1rem #72DC4D;
+    padding: 2rem;
+    display: grid;
+    transition: all .3s;  
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem; 
+    border: 3px solid black, 
+
+}
+
+.Info-caja-1{
+    animation: moveInLeft 2.5s ease-out; 
+}
+.Info-caja-2{
+    animation: moveInBottom 2.5s ease-out; 
+}
+.Info-caja-3{
+    animation: moveInRight 2.5s ease-out; 
+}
+
+.Info-caja-1:hover, 
+.Info-caja-2:hover, 
+.Info-caja-3:hover{
+    outline: 0.5rem solid #2948ff; 
+    transform: scale(1.05) translateY(-.5rem);
+    box-shadow: 0 2rem 10rem #2948ff;
+    color: #299fff; 
+}
+
+
+.heading-secondary{
+    text-shadow: 0rem .2rem .4rem black; 
+}
 
 /* /////////////////// ITC */
 
@@ -126,15 +185,15 @@ body{
 
 /* /////////////////// VIDEOJUEGO */
 
-#videojuego{
-    grid-area: vj; 
+.Videojuego{
+    grid-area: Videojuego; 
 }
 
 /* /////////////////// VISUALIZACIÓN DE DATOS */
 
 
-#visualización-datos{
-    grid-area: vd; 
+.Gráficas{
+    grid-area: Gráficas; 
 }
 
 
