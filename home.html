@@ -19,7 +19,7 @@
     </head>
     <body>
         <div id="layout">
-            <header class="header">
+            <!-- <header class="header">
                 <div class="bg-video">
                     <video class="bg-video__content" autoplay muted loop>
                         <source src="img/matrix-raining-code.mp4" type="video/mp4">
@@ -29,10 +29,10 @@
                 <div class="header__text-box">
                         <h1 class="heading-primary">
                             <span class="heading-primary--main">Code</span> <!-- used to mark up a part of a text, or a part of a document.-->
-                            <span class="heading-primary--sub">Jumpers</span>
+                            <!-- <span class="heading-primary--sub">Jumpers</span>
                         </h1>
                 </div>
-            </header>
+            </header>  -->
             <section class="Información" id="Información">
                 <div class="Info-caja Info-caja-1">
                     <div id="ITC">
@@ -50,7 +50,7 @@
                         <h2 class="heading-secondary">Sobre Code Jumpers...</h2>
                         
                     </div>
-                </div>
+                </div>  
             </section>
             <section class="Videojuego">
                 <div id="videojuego">
@@ -129,12 +129,17 @@
                           });
                         };
                         document.body.appendChild(script);
+                        
                     </script>
                 </div>
             </section>
             <section class="Gráficas">
                 <div id="visualización-datos">
                     <h2>Apartado de visualización de datos</h2>
+                    <canvas id='myChart' height="400px" width="400px"></canvas>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.js"></script>
+                    <script src="https://unpkg.com/@sgratzl/chartjs-chart-boxplot@3"></script>
+                    <script src="/Gráficas/script.js"></script> 
                 </div>
             </section>
         </div>

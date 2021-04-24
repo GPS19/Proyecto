@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 function connectToDB() {
     // Change the data to match your configuration.
     try {
-        return mysql.createConnection({ host: 'localhost', user: 'root', password: '...', database: 'game', insecureAuth: true });
+        return mysql.createConnection({ host: 'localhost', user: 'root', password: 'macsqlserverbgu', database: 'game', insecureAuth: true });
     }
     catch (error) {
         console.log(error);

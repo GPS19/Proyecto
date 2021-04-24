@@ -80,6 +80,9 @@ async function getChart(data) {
     },
     options: {
       responsive: true,
+      ticks: {
+        min: 0
+      },
       legend: {
         position: 'top',
       },

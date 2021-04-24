@@ -187,6 +187,7 @@ body{
 
 .Videojuego{
     grid-area: Videojuego; 
+    margin: auto
 }
 
 /* /////////////////// VISUALIZACIÓN DE DATOS */
@@ -194,6 +195,13 @@ body{
 
 .Gráficas{
     grid-area: Gráficas; 
+    margin: auto;
+    width: 960px;
+    height: 540px
+}
+
+#visualización-datos{
+   
 }
 
 
@@ -260,16 +268,6 @@ body{
 
 
 /* //////////////////// VIDEOJUEGO */
-
-#unity-container { 
-    position: absolute 
-}
-
-#unity-container.unity-desktop { 
-    left: 50%; 
-    top: 50%; 
-    transform: translate(-50%, -50%) 
-}
 
 #unity-container.unity-mobile { 
     width: 100%; 
