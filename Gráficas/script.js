@@ -102,6 +102,8 @@ async function fetchData() {
     const data = await response.json().then(getData);
 
     getChart(data);
+    document.getElementById("myChart").style = "height:100%; width:100%";
+
   }
 
 }
