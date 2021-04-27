@@ -17,6 +17,7 @@ font-family: 'Press Start 2P', cursive;
 
 html{
     font-size: 62.5%;
+    cursor: pointer; 
 }
 
 
@@ -56,7 +57,6 @@ body{
     grid-area: header;
     height: 75vh; 
     font-family: 'Press Start 2P', cursive;
-    color:  #72DC4D; 
     position: relative; 
     margin-bottom: 2rem;
     border-bottom: 1px solid #72DC4D;
@@ -88,13 +88,12 @@ body{
     text-transform: uppercase;
     backface-visibility: hidden; 
     animation: moveInBottom 2s ease-out; 
-    transition: all .3s ; 
+    transition: all .4s; 
 }
 
 .heading-primary:hover,
 .heading-primary:active{
     transform: scale(1.5); 
-    color: #2948ff;
     text-shadow: 1rem 1rem 1rem black;
 }
 
@@ -145,22 +144,35 @@ body{
 }
 
 .Info-caja-1{
-    animation: moveInLeft 2.5s ease-out; 
+    animation: moveInLeft 2.5s ease-out;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #7ed56f 50%);
+    background-size: 240%;
+    transition: all .5s; 
 }
 .Info-caja-2{
-    animation: moveInBottom 2.5s ease-out; 
+    animation: moveInBottom 2.5s ease-out;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #7ed56f 50%);
+    background-size: 240%;
+    transition: all .5s; 
 }
 .Info-caja-3{
-    animation: moveInRight 2.5s ease-out; 
+    animation: moveInRight 2.5s ease-out;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #7ed56f 50%);
+    background-size: 240%;
+    transition: all .5s;  
 }
 
 .Info-caja-1:hover, 
 .Info-caja-2:hover, 
-.Info-caja-3:hover{
-    outline: 0.2rem solid #2948ff; 
-    transform: scale(1.05) translateY(-.5rem);
-    box-shadow: 0 2rem 2rem #2948ff;
-    color: #299fff; 
+.Info-caja-3:hover,
+.Info-caja-1:active, 
+.Info-caja-2:active, 
+.Info-caja-3:active{
+    outline: 0.1rem double black; 
+    color: white;     
+    box-shadow: 0 2rem 2rem #7ed56f;
+    background-position: 100%;
+    transform: scale(1.05) translateY(-.7rem);
 }
 
 
@@ -256,6 +268,28 @@ body{
         opacity: 1;
         transform: translate(0); 
     }
+}
+
+
+@keyframes animate
+{
+ 
+  0%, 18%, 20%, 50%, 60%, 65%, 80%, 90%
+  {
+    color: #0e3742; 
+    text-shadow: none; 
+  }
+  18%, 20%, 30%, 50%, 60%, 80%, 90%, 100%
+  {
+    color: #fff; 
+    text-shadow: 0 0 10px #03bcf4,
+      0 0 20px #03bcf4,
+      0 0 40px #03bcf4,
+      0 0 80px #03bcf4,
+      0 0 120px #03bcf4,
+      0 0 160px #03bcf4; 
+  }
+  
 }
 
 
@@ -418,18 +452,58 @@ body{
 }
 
 .popup__text{
-    font-size: 1.5rem;
+    font-size: 2.3rem;
+    text-transform: uppercase; 
     text-align: justify;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
+    /* column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #72DC4D; 
+    hyphens: auto; */
+}
+
+.popup__text--CJ{
+    font-size: 2.3rem;
     column-count: 2;
     column-gap: 4rem;
     column-rule: 1px solid #72DC4D; 
-    hyphens: auto;
 }
+
+
+.popup__list--ITC, 
+.popup__list--STEAM{
+    font-size: 1.7rem;
+    list-style: none;
+    text-transform: uppercase;
+    margin-bottom: 2rem; 
+}
+
+.popup__item--ITC,
+.popup__item--STEAM{
+    display: inline-block; 
+    transition: all .2s;
+}
+
+.popup__item--ITC:hover, 
+.popup__item--ITC:active,
+.popup__item--STEAM:hover, 
+.popup__item--STEAM:active{
+    box-shadow: 0 1rem 2rem rgb(#72DC4D, .4);
+    transform: rotate(5deg) scale(1.2);
+    background-color: rgb(43, 43, 43);
+}
+
+.popup__item--ITC:not(.popup__item--ITC:last-child),
+.popup__item--STEAM:not(.popup__item--STEAM:last-child){
+    margin-right: 1.5rem;
+}
+
+/* /////////////////////////////////// HEADER SECONDARY */
+
 
 .heading-secondary{
     font-family: 'Press Start 2P', cursive; 
-    font-size: 2.5rem; 
+    font-size: 2rem; 
     text-transform: uppercase;
     display: inline-block; 
     background-image: linear-gradient(to right, #7ed56f
@@ -444,6 +518,7 @@ body{
 
 }
 
+/* /////////////////////////////////// BOTONES */
 
 .btn, 
 .btn:link, 
