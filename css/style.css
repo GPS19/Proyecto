@@ -48,6 +48,7 @@ body{
     "Trailer"
     "Videojuego"
     "Gráficas"
+    "Footer"
 
 }
 
@@ -339,9 +340,6 @@ body{
 }
 
 
-
-
-
 /* //////////////////// VIDEOJUEGO */
 
 #unity-container.unity-mobile { 
@@ -614,3 +612,92 @@ body{
 }
 
 
+
+
+/* /////////////////////////////// FOOTER */
+
+.Footer{
+    grid-area: Footer;
+    background-color: rgb(27, 27, 27);
+    position: relative; 
+    height: 35rem; 
+}
+
+.footer__logo-box{
+    text-align: center;
+}
+
+.footer__logo{
+    width: 9rem; 
+    height: auto;
+    transition: all .2s;
+    font-size: 1rem; 
+    margin-top: 3rem; 
+    filter: drop-shadow(0rem .1rem 1rem #28b485);
+    animation: big 10s infinite; 
+}
+
+.footer__text-box{
+    text-align: center; 
+    position: absolute; 
+    top: 80%; 
+    left: 50%; 
+    transform: translate(-50%, -80%)
+}
+
+.footer__list{
+    list-style: none; 
+}
+
+.footer__item{
+    text-transform: uppercase;
+    display: inline-block; 
+    text-decoration: none;
+    font-size: 2.5rem;   
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #7ed56f 50%);
+    background-size: 240%;
+    transition: all .5s;
+}
+
+.footer__item:hover,
+.footer__item:active{
+    color: white;     
+    box-shadow: 0 .2rem 2rem #7ed56f;
+    background-position: 100%;
+    transform: scale(1.05) translateY(-.7rem);
+    text-shadow:  
+
+                  0rem .1rem .1rem black,
+                  0rem .1rem .2rem black,
+                  0rem .1rem .4rem black,
+                  0rem .1rem .8rem #28b485,
+                  0rem .1rem .12rem #28b485,
+                  0rem .1rem .16rem #28b485; 
+}
+
+.footer__item:not(.footer__item:last-child){
+    margin-right: 1.5rem;
+}
+
+.heading-secondary-footer{
+    font-size: 2rem; 
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes big{
+    0%, 100%{
+        transform: translateY(0) scale(1);  
+    }
+
+    50%{
+        transform: translateY(2rem) scale(3);  
+    }
+}
