@@ -19,7 +19,7 @@
     </head>
     <body>
         <div id="layout">
-              <header class="header">
+            <header class="header">
                 <div class="header__text-box">
                         <h1 class="heading-primary">
                             <span class="heading-primary--main">Code</span> 
@@ -44,9 +44,20 @@
                     </div>
                 </a>  
             </section>
-            <!-- <section class="Videojuego">
+            
+            <section class="Trailer">
+              <h2 class="heading-secondary heading-secondary-big">Trailer</h2>
+              <div class="video">
+                <video class="video__content" width="1200" height="487" controls>
+                    <source src="img/video.mp4" type="video/mp4">
+                    Your browser is not supported!
+                </video>
+              </div>
+            </section>
+            
+            <section class="Videojuego">
                 <div id="videojuego">
-                    <h2>Videojuego</h2>
+                    <h2 class="heading-secondary heading-secondary-big">Videojuego</h2>
                     <div id="unity-container" class="unity-desktop">
                         <canvas id="unity-canvas" width=960 height=540></canvas>
                         <div id="unity-loading-bar">
@@ -105,7 +116,6 @@
                           canvas.style.height = "540px";
                         }
                         loadingBar.style.display = "block";
-                  
                         var script = document.createElement("script");
                         script.src = loaderUrl;
                         script.onload = () => {
@@ -121,19 +131,18 @@
                           });
                         };
                         document.body.appendChild(script);
-                        
                     </script>
                 </div>
             </section>
             <section class="Gráficas">
+              <h2 class="heading-secondary heading-secondary-big">Indicadores STEAM</h2>
                 <div id="visualización-datos">
-                    <h2>Apartado de visualización de datos</h2>
                     <canvas id='myChart' height="400px" width="400px"></canvas>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.js"></script>
                     <script src="https://unpkg.com/@sgratzl/chartjs-chart-boxplot@3"></script>
                     <script src="/Gráficas/script.js"></script> 
                 </div>
-            </section> -->
+            </section>
         </div>
         
         <div class="popup" id="popup--ITC">
@@ -144,20 +153,20 @@
             </div>
             <div class="popup__right">
               <a href="#Información" class="popup__close">&times;</a>
-              <h2 class="heading-secondary">Ingenieria en Tecnologias Computacionales</h2>
+              <h2 class="heading-secondary heading-secondary--ITC">Ingenieria en Software</h2>
               <p class="popup__text popup__text--ITC">
                 Cada vez el mundo esta teniendo avances tecnologicos aun mejores, creados para facilitar y mejorar la calidad de vida de cada uno de nosotros. Los ingenieros en tecnologias computacionales, son los que llevaran la vanguardia de este cambio.
                 Se enfocan en diferentes areas:
                 <ul class="popup__list--ITC">
-                  <li class="popup__item--ITC">Desarrollo web y movil</li>
-                  <li class="popup__item--ITC">Inteligencia Artificial</li>
-                  <li class="popup__item--ITC">Ciencia de Datos</li>
-                  <li class="popup__item--ITC">Videojuegos</li>
-                  <li class="popup__item--ITC">Ciberseguridad</li>
-                  <li class="popup__item--ITC">Investigacion de nuevas tecnologias</li>
+                  <li class="popup__item--ITC"><a href="https://codigoonclick.com/desarrollo-web-vs-desarrollo-movil/" target="_blank" class="popup__item--link">Desarrollo web y movil</a></li>
+                  <li class="popup__item--ITC"><a href="https://www.oracle.com/mx/artificial-intelligence/what-is-ai/" target="_blank" class="popup__item--link">Inteligencia Artificial</a></li>
+                  <li class="popup__item--ITC"><a href="https://www.oracle.com/mx/data-science/what-is-data-science/" target="_blank" class="popup__item--link">Ciencia de Datos</a></li>
+                  <li class="popup__item--ITC"><a href="https://www.softzone.es/programas/lenguajes/programacion-videojuegos/" target="_blank" class="popup__item--link">Videojuegos</a></li>
+                  <li class="popup__item--ITC"><a href="https://latam.kaspersky.com/resource-center/definitions/what-is-cyber-security" class="popup__item--link">Ciberseguridad</a></li>
+                  <li class="popup__item--ITC"><a href="https://www.gaceta.unam.mx/urge-aumentar-la-investigacion-en-ciencias-de-la-computacion/" target="_blank" class="popup__item--link">Investigacion de nuevas tecnologias</a></li>
                 </ul>
               </p>
-              <a href="https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales" class="btn btn--green" target="_blank">Informacion...</a>
+              <a href="https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales" class="Info-caja Info-caja-4" target="_blank"><h3 class="heading-tertiary heading-tertiary-info">Mas Informacion...</h3></a>
             </div>
           </div>
         </div>
@@ -185,7 +194,7 @@
                 </ul>
               </p>
 
-              <a href="https://movimientosteam.org/" class="btn btn--green" target="_blank">Informacion...</a>
+              <a href="https://movimientosteam.org/" class="Info-caja Info-caja-5" target="_blank"><h3 class="heading-tertiary heading-tertiary-info">Mas Informacion...</h3></a>
             </div>
           </div>
         </div>
