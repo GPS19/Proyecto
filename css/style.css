@@ -128,7 +128,7 @@ body{
     padding: 1rem; 
     column-gap: 4rem;
     grid-template-areas: 
-    "ITC STEAM CJ"; 
+    "STEAM Problema ITC CJ"; 
 
     border-bottom: 1px solid #72DC4D;
 
@@ -158,14 +158,16 @@ body{
 
 }
 
-.Info-caja-1{
-    animation: moveInLeft 2.5s ease-out;
+.Info-caja-1,
+.Info-caja-6{
+    animation: moveInBottom 2.5s ease-out;
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #7ed56f 50%);
     background-size: 240%;
     transition: all .5s; 
 }
+
 .Info-caja-2{
-    animation: moveInBottom 2.5s ease-out;
+    animation: moveInLeft 2.5s ease-out;
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #7ed56f 50%);
     background-size: 240%;
     transition: all .5s; 
@@ -193,11 +195,13 @@ body{
 .Info-caja-3:hover,
 .Info-caja-4:hover,
 .Info-caja-5:hover,
+.Info-caja-6:hover,
 .Info-caja-1:active, 
 .Info-caja-2:active, 
 .Info-caja-3:active,
 .Info-caja-4:active,
-.Info-caja-5:active{
+.Info-caja-5:active
+.Info-caja-6:active{
     outline: 0.1rem double black; 
     color: white;     
     box-shadow: 0 2rem 2rem #7ed56f;
@@ -247,6 +251,12 @@ body{
 
 #Code-Jumpers{
     grid-area: CJ; 
+}
+
+/* /////////////////// PROBLEMA */
+
+#Problema{
+    grid-area: Problema; 
 }
 
 /* /////////////////// TRAILER */
@@ -560,7 +570,17 @@ body{
     margin-right: 1.5rem;
 }
 
-
+.popup__text--Problema{
+    font-size: 2rem;
+    text-transform: uppercase; 
+    text-align: justify;
+    color: white; 
+    margin-bottom: 3rem; 
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #72DC4D; 
+    hyphens: auto;
+}
 
 /* /////////////////////////////////// HEADING SECONDARY */
 
@@ -646,7 +666,8 @@ body{
 }
 
 .footer__list{
-    list-style: none; 
+    list-style: none;
+    border-bottom: 1px solid #72DC4D; 
 }
 
 .footer__item{
